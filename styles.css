@@ -26,7 +26,7 @@
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 2r 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 3fr;
     grid-template-areas:
     "searchbar userinfo"
@@ -266,4 +266,6 @@
 
 
 
-
+@media only screen and (max-width: 600px)  {
+    
+}
