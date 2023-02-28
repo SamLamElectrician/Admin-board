@@ -34,12 +34,11 @@ ul {
 
 .dashboardheader {
 	grid-area: sidehead;
-	padding-left: 40px;
 	align-items: center;
 	display: flex;
-	gap: 20px;
+	justify-content: space-around;
 	background-color: white;
-	width: 100%;
+	width: 90%;
 	height: 100%;
 	box-shadow: 2px 2px 5px rgb(36, 35, 35);
 	border-radius: 6px;
@@ -51,6 +50,19 @@ ul {
 	color: #776d6d;
 }
 
+.dashboardheader label {
+	padding: 1% 6%;
+	border-radius: 25px;
+	color: #fff;
+	background-color: plum;
+	border: none;
+	box-shadow: 4px 5px 5px grey;
+}
+
+.dashboardheader label:hover {
+	background-color: purple;
+}
+
 .headTitle {
 	grid-area: searchbar;
 	text-align: center;
@@ -60,37 +72,47 @@ ul {
 }
 
 .userinfo {
-	border: 2px solid blue;
 	display: flex;
-	gap: 5%;
 	align-items: center;
 }
 
 .bellBox {
-	border: 3px solid green;
-	height: 100%;
-	width: 30%;
+	object-fit: contain;
+	margin-right: 6%;
 }
 .bell {
-	width: 60%;
-	border: 2px solid purple;
+	max-width: 100%;
+	max-width: 100%;
+}
+.bell:hover {
+	background-color: plum;
+}
+
+.searchContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-left: 1%;
+	height: 100%;
+	width: 20vw;
+	border-radius: 8px;
+	box-shadow: -4px 3px 5px grey;
 }
 
 .searchField {
 	display: flex;
-	align-items: center;
-	gap: 5px;
-	border: 2px solid red;
-}
-
-input[type='text'] {
+	justify-content: center;
+	border: 1px solid grey;
 	border-radius: 8px;
-	padding: 10px;
+}
+input[type='text'] {
+	border: none;
 }
 
 .profile {
 	justify-self: center;
-	border-radius: 50%;
+	border-radius: 8px;
 	width: 4em;
 	height: 4em;
 	display: flex;
@@ -98,8 +120,12 @@ input[type='text'] {
 	justify-content: center;
 	font-size: 20px;
 	color: #ffffff;
+	box-shadow: -5px 4px 4px grey;
 }
 
+.manage {
+	margin-right: 4%;
+}
 .greeting > .profile {
 	justify-self: end;
 	margin-right: 15px;
@@ -190,7 +216,7 @@ input[type='text'] {
 }
 
 .projects {
-	padding: 10px;
+	padding: 15px;
 	display: grid;
 	grid-template-columns: 30% 2fr;
 	grid-template-rows: 20% 4fr;
@@ -202,39 +228,54 @@ input[type='text'] {
 }
 
 .project {
+	border: 1px solid grey;
+	border-left: 0;
 	box-sizing: border-box;
 	border-radius: 10px;
 	background-color: #fff;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	gap: 20%;
-	font-size: 1.6rem;
+	gap: 6%;
+	font-size: 1.2rem;
 	box-shadow: 4px 4px 20px grey;
-	text-align: center;
+	padding: 4%;
 }
 
-.block {
-	height: 5vh;
-	padding: 5%;
-	margin: 20px;
-	border-radius: 8px;
+.text-block {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+	gap: 10px;
 }
 
 .question {
-	background-color: rgb(229, 138, 229);
+	-webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: black;
+	background-color: rgb(228, 149, 228);
+	color: white;
 	box-shadow: 4px 5px 5px grey;
-	white-space: pre-line;
+	border-radius: 6px;
+	padding: 6%;
 }
 
 .answer {
 	background-color: #fff;
 	border: 1px solid grey;
 	box-shadow: 4px 5px 5px grey;
+	border-radius: 6px;
+	font-size: 1rem;
+	padding: 6%;
 }
 .action-block {
 	display: flex;
 	flex-direction: column;
+}
+
+.action-block img {
+	padding: 8%;
+	margin: 4%;
 }
 
 .action-block > img:hover {
@@ -244,24 +285,30 @@ input[type='text'] {
 .btnBody {
 	grid-area: head;
 	display: flex;
-	gap: 10px;
+	gap: 8%;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	text-transform: uppercase;
 }
 
 .btnBody .button {
-	color: #050505;
-	font-size: 2.4rem;
+	color: #474747;
+	font-size: 2.2rem;
 	font-weight: bold;
 	width: 93%;
-	padding: 3%;
+	padding: 1.5%;
 	background-color: white;
-	border: none;
+	border: 1px solid grey;
+	border-top: 0px;
+	border-left: 0px;
 	border-radius: 8px;
 	box-shadow: 4px 4px 10px grey;
 }
 
+.btnBody button:hover {
+	background-color: plum;
+}
 .announcements {
 	grid-area: body;
 	display: flex;

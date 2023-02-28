@@ -18,7 +18,9 @@
 			<header class="header">
 				<div class="dashboardheader">
 					<h3>Dashboard</h3>
-					<button>Upload</button>
+					<input type="file" id="actual-btn" hidden />
+
+					<label for="actual-btn">Choose File</label>
 				</div>
 				<div class="headTitle">Sam Lam Electrician</div>
 
@@ -26,15 +28,16 @@
 					<div class="bellBox">
 						<img class="bell" src="./img/bell.png" alt="bell" />
 					</div>
-					<div class="searchField">
-						<input type="text" placeholder="Search Jokes" />
-						<label for="search"
-							><img src="./img/search.svg" alt="search"
-						/></label>
+					<div class="searchContainer">
+						<div class="searchField">
+							<input type="text" placeholder="Search Jokes" />
+							<img src="./img/search.svg" alt="search" />
+							<label for="search"></label>
+						</div>
 					</div>
 					<img class="profile" src="./img/dad.png" alt="user profile image" />
 					<img
-						class="profile"
+						class="profile manage"
 						src="./img/management.png"
 						alt="user profile image"
 					/>
@@ -91,7 +94,7 @@
 				<div class="projects">
 					<div class="project">
 						<div class="text-block">
-							<p class="question block">What's brown and sticky</p>
+							<p class="question block">What's brown and sticky?</p>
 							<p class="answer block">Hover to Reveal</p>
 						</div>
 						<div class="action-block">
